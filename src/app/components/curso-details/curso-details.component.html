@@ -1,5 +1,5 @@
 <div *ngIf="viewMode; else editable">
-  <div *ngIf="currentElement.id">
+  <div *ngIf="currentElement.id"class="background-box">
     <h4>Instituto educativo - Curso</h4>
     <div>
       <label><strong>Nombre:</strong></label> {{ currentElement.nombre }}
@@ -27,8 +27,8 @@
     <p>Please click on a Post...</p>
   </div>
 </div>
-<ng-template #editable>
-  <div *ngIf="currentElement.id" class="edit-form">
+<ng-template #editable class="background-box ">
+  <div *ngIf="currentElement.id" class="edit-form" class="background-box">
     <h4>Instituto educativo - Curso</h4>
     <form>
       <div class="form-group">
@@ -44,8 +44,8 @@
       <div class="form-group">
         <label for="description">Fecha inicio:</label>
         <input
-          type="text"
-          class="form-control"
+         type="datetime-local"
+         class="form-control"
           id="description"
           [(ngModel)]="currentElement.fechaInicio"
           name="description"
@@ -59,6 +59,10 @@
     <button class="badge badge-danger mr-2" (click)="deleteElement()">
       Delete
     </button>
+    <div *ngIf="message === 'Curso eliminado correctamente'" class="alert alert-success mt-3">
+    <strong>Éxito:</strong> Curso eliminado con éxito.
+  </div>
+
     <button
       type="submit"
       class="badge badge-success mb-2"
@@ -73,4 +77,3 @@
     <p>Elemento no encontrado...</p>
   </div>
 </ng-template>
-

@@ -1,0 +1,5 @@
+.background-box {
+  background-color: #CD0654; /* Fondo blanco semitransparente */
+  padding: 20px; /* Añade espacio alrededor del contenido para que el fondo sea visible */
+  border-radius: 20px;
+}

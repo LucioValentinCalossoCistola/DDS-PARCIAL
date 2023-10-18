@@ -51,14 +51,19 @@ export class CursoDetailsComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
-  deleteElement(): void {
-    this.cursoService.delete(this.currentElement.id)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.router.navigate(['/cursos']);
-        },
-        error: (e) => console.error(e)
-      });
-  }
+ deleteElement(): void {
+  this.cursoService.delete(this.currentElement.id)
+    .subscribe({
+      next: (res) => {
+        console.log(res);
+        this.message = res.message ? res.message : 'Curso eliminado correctamente';
+        // Puedes redirigir a la lista de cursos u tomar otras acciones aquí
+      },
+      error: (e) => {
+        console.error(e);
+        // Manejar errores si es necesario
+      }
+    });
 }
+}
+

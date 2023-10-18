@@ -1,0 +1,15 @@
+.background-box {
+  background-color: #CD0654; /* Fondo blanco semitransparente */
+  padding: 30px; /* Añade espacio alrededor del contenido para que el fondo sea visible */
+  border-radius: 20px;
+}
+li:nth-child(odd) {
+  background-color: #9E0245; /* Color de fondo para filas impares */
+}
+
+li:nth-child(even) {
+  background-color: #0D3293; /* Color de fondo para filas pares */
+}
+li {
+  color: #FFFFFF; /* Cambia #FF0000 al color de texto que prefieras */
+}

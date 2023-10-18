@@ -1,8 +1,8 @@
 <div>
   <div class="submit-form">
-    <div *ngIf="!submitted">
+    <div *ngIf="!submitted"class="background-box">
       <div class="form-group">
-        <label for="title">Nombre</label>
+        <label for="title">NOMBRE</label>
         <input
           type="text"
           class="form-control"
@@ -13,15 +13,37 @@
         />
       </div>
       <div class="form-group">
-        <label for="content">Fecha inicio</label>
+        <label for="content">FECHA DE INICIO</label>
         <input
-          class="form-control"
+          type="datetime-local"
+          class="form-control datepicker"
+          data-date-format="yyyy-mm-dd"
           id="content"
           required
           [(ngModel)]="curso.fechaInicio"
           name="content"
         />
+        
       </div>
+      
+      <div class="form-group">
+  <label for="idDocente">ID DEL DOCENTE (*)</label>
+  <input type="number" class="form-control" id="idDocente" [(ngModel)]="curso.idDocente" name="idDocente" />
+</div>
+
+<div class="form-group">
+  <label for="temaSelect">TEMA(*):</label>
+  <select id="temaSelect" [(ngModel)]="curso.tema" name="tema" class="form-control">
+    <option *ngFor="let tema of temas" [ngValue]="tema">{{ tema.nombre }}</option>
+  </select>
+</div>
+<div class="alert alert-danger d-flex align-items-center" role="alert" *ngIf="showAlert" class="alert alert-danger">
+ 
+ FALTAN COMPLETAR CAMPOS OBLIGATORIOS (*)
+</div>
+
+
+ 
       <button (click)="saveCurso()" class="btn btn-success">Submit</button>
     </div>
     <div *ngIf="submitted">
@@ -30,3 +52,6 @@
     </div>
   </div>
 </div>
+
+
+

@@ -1,2 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  background-image: url('C:\Users\Familia Calosso\git\ngDDS2023\FOTOS\FONDO.jpg'); /* Ajusta la ruta según la ubicación de tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Para centrar verticalmente */
+  justify-content: center; /* Para centrar verticalmente */
+  align-items: center; /* Para centrar horizontalmente */
+}
+.container {
+  display: grid;
+  place-items: center;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    /* Hacer ajustes de estilo para tamaños de pantalla más pequeños */
+  }
+}
+h1, h2, h3, h4, h5, h6, label {
+  color: #08A089; /* Cambia #FF0000 al color que prefieras */
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrado horizontal */
+  line-height: 1.5; /* Centrado vertical */
+}
+
+p {
+  color: #0967F7; /* Cambia #FF0000 al color que prefieras */
+}
+input {
+  color: #0967F7; /* Cambia #FF0000 al color que prefieras */
+  background-color: #FFFF00;
+}

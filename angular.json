@@ -89,13 +89,32 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            
             "styles": [
               "src/styles.css"
             ],
+            "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
+
+],
+
+            
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2fb70af4-cc53-4098-aefa-7815a54350d1"
   }
+  
 }
+
