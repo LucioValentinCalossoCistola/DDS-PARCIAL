@@ -1,0 +1,11 @@
+version: "3"
+services:
+  dds-database:
+    image: "cherckyto/dds-mysql:1.0"
+    ports:
+      - 3306:3306
+
+  dds-backend:
+    image: "dds-backend:latest"
+    ports:
+      - 8080:8080
